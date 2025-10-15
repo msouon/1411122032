@@ -1,2 +1,5 @@
 git config --global user.name msouon
 git config --global user.email jackyl662570078@gmail.com
+
+在你的預訂資料夾開啟cmd輸入
+git remote add origin https://github.com/msouon/1411122032.git
