@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <title>練習題</title>
+</head>
+<body>
+
+
+  <form>
+    <!-- 使用者名稱 -->
+    <p>
+      姓名:
+      <input type="text" name="userName" size="20">
+    </p>
+
+    <!-- 使用者年齡 -->
+    <p>
+      年齡:
+      <input type="radio" name="userAge" value="age1"> 20 
+      <input type="radio" name="userAge" value="age2" checked> 20~29 
+      <input type="radio" name="userAge" value="age3"> 30+
+    </p>
+
+    <!-- 使用過哪些業者的門號 -->
+    <p>
+      您使用過哪些業者的門號? (可複選)
+      <input type="checkbox" name="userNumber[]" value="carrier1" checked> 中華電信
+      <input type="checkbox" name="userNumber[]" value="carrier2"> 台灣大哥大
+      <input type="checkbox" name="userNumber[]" value="carrier3"> 遠傳
+      <input type="checkbox" name="userNumber[]" value="carrier3"> 台灣之星
+    </p>
+
+    <!-- 使用過哪些廠牌的手機 -->
+    <p>
+      您使用過哪些廠牌的手機? (可複選)
+      <select name="userPhone[]" size="4" multiple>
+        <option value="ASUS" selected>ASUS</option>
+        <option value="Apple">Apple</option>
+        <option value="hIC">hIC</option>
+        <option value="SONY">SONY</option>
+      </select>
+    </p>
+
+    <!-- 提交和重設按鈕 -->
+    <p>
+      <input type="submit" value="提交">
+      <input type="reset" value="重設">
+    </p>
+  </form>
+
+</body>
+</html>
