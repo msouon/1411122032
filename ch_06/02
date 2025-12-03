@@ -1,0 +1,30 @@
+以下是圖片中的文字逐行整理後的內容（不含任何圖片框線與干擾）：
+
+---
+
+### **5-4-9 定位方式屬性**
+
+• **display** 屬性用來設定 HTML 元素的顯示層級，其語法如下：
+
+```
+display: 設定值
+```
+
+• **top、bottom、left、right** 等屬性用來設定 Block Box 的上下，其語法如下：
+
+```
+top: 長度 | 百分比 | auto
+bottom: 長度 | 百分比 | auto
+left: 長度 | 百分比 | auto
+right: 長度 | 百分比 | auto
+```
+
+• **position** 屬性用來設定 Box 的定位方式，其語法如下：
+
+```
+position: static | relative | absolute | fixed
+```
+
+---
+
+如果你需要，我也可以幫你重新排版成更漂亮的筆記版本！

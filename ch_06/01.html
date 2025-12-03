@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    p {
+        display: block;
+        font-size: 15px;
+        line-height: 2;
+    }
+    span {
+        display: inline;
+    }
+    .note {
+        font-size: 12px;
+        color: blue;
+        position: static; /* 預設，稍後由各 class 改寫 */
+    }
+
+    /* 四種定位方式 */
+    .static { position: static; }
+
+    .relative {
+        position: relative;
+        top: 5px;     /* 原圖設定 */
+    }
+
+    .absolute-container {
+        position: relative; /* 絕對定位基準 */
+    }
+    .absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .fixed {
+        position: fixed;
+        top: 10px;
+        right: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h3>position: static</h3>
+<p>
+    青山橫北郭，白水繞東城。此地一為別，孤蓬萬里征。
+    <span class="note static">※注釋：「郭」意指城外</span>
+</p>
+
+<h3>position: relative</h3>
+<p>
+    青山橫北郭，白水繞東城。此地一為別，孤蓬萬里征。
+    <span class="note relative">※注釋：「郭」意指城外（下移 5px）</span>
+</p>
+
+<h3>position: absolute</h3>
+<p class="absolute-container">
+    青山橫北郭，白水繞東城。此地一為別，孤蓬萬里征。
+    <span class="note absolute">※注釋：這段文字以 p 為基準</span>
+</p>
+
+<h3>position: fixed</h3>
+<p>
+    青山橫北郭，白水繞東城。此地一為別，孤蓬萬里征。
+    <span class="note fixed">※固定在右上角</span>
+</p>
+
+</body>
+</html>
