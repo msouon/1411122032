@@ -4,60 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 引入 Bootstrap 樣式檔 -->
-    <!-- 01.html 位於 ch_07 資料夾，因此需回到上一層 ../ 再進 css 資料夾 -->
+    <!-- 由於 01.html 在 ch_07 內，因此需往上一層（../）才能找到 css/bootstrap.min.css -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <style>
-        /* 統一框線、背景與對齊用 */
+        /* 統一框線樣式：紫色線、1px（較細）、背景淡紫、不過度凸出 */
         .box{
-            border:2px solid purple;
-            background:#eecff7;
-            padding:10px;
-            text-align:center;
+            border:1px solid purple;   /* 比 2px 細，看起來更像示範 */
+            background:#eecff7;        /* 同課堂背景色 */
+            padding:6px;               /* 適中內距，避免太厚 */
+            text-align:center;         /* 置中以符合示範風格 */
         }
     </style>
 </head>
 <body>
 
-<div class="container"><!-- Bootstrap 的頁面容器 -->
+<!-- container-fluid 可讓網頁貼齊左右邊，不會像 container 留白 -->
+<div class="container-fluid">
 
-    <!-- ▣ 頁首（無論大小螢幕都佔 12 欄）-->
-    <div class="row mb-2">
+    <!-- ▣ 頁首（固定整欄 col-12） -->
+    <!-- row 是水平整列，不需 mb-2（會產生上下距離） -->
+    <div class="row">
         <div class="col-12 box">頁首</div>
     </div>
 
-    <!-- ▣ 主體區塊：導覽列 ＋ 內容區 ＋ 側邊欄 -->
-    <div class="row mb-2">
+    <!-- ▣ 主體：導覽列、內容區、側邊欄 -->
+    <div class="row">
 
-        <!-- ◤ 導覽列
-             xs：12（直列）
-             sm：12（直列）
-             md 以上：佔 2 欄 -->
+        <!-- ◤ 導覽列（Navbar） 
+             xs（超小螢幕）：12 欄（自己一行）
+             sm（≥576px）：仍為 12（因示範第二張圖）
+             md（≥768px）：變為 2 欄 → 像示範第三張： 1 : 3 : 2 中的 1 -->
         <div class="col-12 col-md-2 box">導覽列</div>
 
-        <!-- ◤ 內容區
-             xs：12（直列）
-             sm：8（內容 : 側邊 = 2 : 1）
-             md：6（導覽 : 內容 : 側邊 = 1 : 3 : 2）-->
+        <!-- ◤ 內容區（Content）
+             xs：12 欄（直排）
+             sm：8 欄（8:4 → 2:1 寬度比）
+             md：6 欄（6 是 1:3:2 的 “3”）-->
         <div class="col-12 col-sm-8 col-md-6 box">內容區</div>
 
-        <!-- ◤ 側邊欄
-             xs：12（直列）
-             sm：4（2:1 的 1）
-             md：4（1:3:2 的 2）-->
+        <!-- ◤ 側邊欄（Sidebar）
+             xs：12（直排）
+             sm：4（與內容區形成 8:4）
+             md：4（與 1:3:2 中 2 的位置一致） -->
         <div class="col-12 col-sm-4 col-md-4 box">側邊欄</div>
 
     </div>
 
-    <!-- ▣ 頁尾（同樣固定 12 欄） -->
-    <div class="row mb-2">
+    <!-- ▣ 頁尾（固定整欄 col-12） -->
+    <div class="row">
         <div class="col-12 box">頁尾</div>
     </div>
 
 </div>
 
-<!-- Bootstrap JS（含 Popper，提供互動功能） -->
+<!-- JS 載入位置同理：01.html 在 ch_07 → 必須 ../ 才能找到 js/bootstrap.bundle.min.js -->
 <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
