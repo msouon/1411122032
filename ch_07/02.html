@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 引入 Bootstrap 樣式檔 -->
+    <!-- 01.html 位於 ch_07 資料夾，因此需回到上一層 ../ 再進 css 資料夾 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <style>
+        /* 統一框線、背景與對齊用 */
+        .box{
+            border:2px solid purple;
+            background:#eecff7;
+            padding:10px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container"><!-- Bootstrap 的頁面容器 -->
+
+    <!-- ▣ 頁首（無論大小螢幕都佔 12 欄）-->
+    <div class="row mb-2">
+        <div class="col-12 box">頁首</div>
+    </div>
+
+    <!-- ▣ 主體區塊：導覽列 ＋ 內容區 ＋ 側邊欄 -->
+    <div class="row mb-2">
+
+        <!-- ◤ 導覽列
+             xs：12（直列）
+             sm：12（直列）
+             md 以上：佔 2 欄 -->
+        <div class="col-12 col-md-2 box">導覽列</div>
+
+        <!-- ◤ 內容區
+             xs：12（直列）
+             sm：8（內容 : 側邊 = 2 : 1）
+             md：6（導覽 : 內容 : 側邊 = 1 : 3 : 2）-->
+        <div class="col-12 col-sm-8 col-md-6 box">內容區</div>
+
+        <!-- ◤ 側邊欄
+             xs：12（直列）
+             sm：4（2:1 的 1）
+             md：4（1:3:2 的 2）-->
+        <div class="col-12 col-sm-4 col-md-4 box">側邊欄</div>
+
+    </div>
+
+    <!-- ▣ 頁尾（同樣固定 12 欄） -->
+    <div class="row mb-2">
+        <div class="col-12 box">頁尾</div>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS（含 Popper，提供互動功能） -->
+<script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
