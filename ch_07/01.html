@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 Bootstrap 網頁</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <style>
+        .box {
+            border: 2px solid purple;
+            background-color: #eecff7;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 頁首 -->
+    <div class="row mb-2">
+        <div class="col-12 box">頁首</div>
+    </div>
+
+    <!-- 導覽列 + 內容區 + 側邊欄 -->
+    <div class="row mb-2">
+
+        <!-- 導覽列 -->
+        <!-- 大中螢幕：1  
+             小螢幕：獨立一行 -->
+        <div class="col-12 col-md-2 box">導覽列</div>
+
+        <!-- 內容區 -->
+        <!-- xs：12（垂直）
+             sm：8（2:1）
+             md：6（1:3:2 的 3）
+             lg：6（同 md） -->
+        <div class="col-12 col-sm-8 col-md-6 col-lg-6 box">內容區</div>
+
+        <!-- 側邊欄 -->
+        <!-- xs：12  
+             sm：4（2:1 中的 1）
+             md：4（1:3:2 的 2）
+             lg：4 -->
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4 box">側邊欄</div>
+
+    </div>
+
+    <!-- 頁尾 -->
+    <div class="row mb-2">
+        <div class="col-12 box">頁尾</div>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
