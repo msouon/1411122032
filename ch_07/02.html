@@ -4,61 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 由於 01.html 在 ch_07 內，因此需往上一層（../）才能找到 css/bootstrap.min.css -->
+    <!-- Bootstrap CSS（01.html 在 ch_07/，所以要回到上一層 ../ 才能找到 css/） -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <style>
-        /* 統一框線樣式：紫色線、1px（較細）、背景淡紫、不過度凸出 */
         .box{
-            border:1px solid purple;   /* 比 2px 細，看起來更像示範 */
-            background:#eecff7;        /* 同課堂背景色 */
-            padding:6px;               /* 適中內距，避免太厚 */
-            text-align:left;         /* 置左以符合示範風格 */
+            border:1px solid purple;
+            background:#eecff7;
+
+            /* 【可調距離 ①：內容與邊框距離（padding）】
+               只改數值即可：4px（更貼）/ 6px（目前）/ 8px、12px（更鬆）
+               不影響排版比例，只影響文字離邊框的距離 */
+            padding:6px;
+
+            /* 文字對齊（目前靠左） */
+            text-align:left;
         }
     </style>
 </head>
 <body>
 
-<!-- container-fluid 可讓網頁貼齊左右邊，不會像 container 留白 -->
+<!-- 【可調距離 ②：整體左右是否貼邊】
+     container-fluid：左右會有一點內距（Bootstrap 預設）
+     若要完全貼齊左右邊：改成 class="container-fluid px-0"
+     px-0 = 左右 padding 變 0（更貼邊） -->
 <div class="container-fluid">
 
-    <!-- ▣ 頁首（固定整欄 col-12） -->
-    <!-- row 是水平整列，不需 mb-2（會產生上下距離） -->
+    <!-- ▣ 頁首 -->
+    <!-- 【可調距離 ③：區塊之間的縫（gap）】
+         row 代表一列
+         若要方塊之間有縫：把 row 改成 row g-1 / g-2 / g-3
+         g-0 = 沒有縫（目前）→ g-1 小縫 → g-2 中縫 → g-3 大縫
+         不影響欄位比例，只影響「格子與格子」的間距 -->
     <div class="row">
         <div class="col-12 box">頁首</div>
     </div>
 
-    <!-- ▣ 主體：導覽列、內容區、側邊欄 -->
+    <!-- ▣ 主體：導覽列 + 內容區 + 側邊欄 -->
+    <!-- 同上：可在這個 row 加 g-1/g-2/g-3 控制三欄之間縫隙 -->
     <div class="row">
 
-        <!-- ◤ 導覽列（Navbar） 
-             xs（超小螢幕）：12 欄（自己一行）
-             sm（≥576px）：仍為 12（因示範第二張圖）
-             md（≥768px）：變為 2 欄 → 像示範第三張： 1 : 3 : 2 中的 1 -->
+        <!-- ◤ 導覽列（Navbar）
+             col-12：xs（<576px）一定直排佔滿整行
+             col-md-2：md（≥768px）開始變成 2/12（1:3:2 裡的 1）
+
+             【可調斷點：什麼時候才變成三欄（1:3:2）？】
+             - 現在用 md：≥768px 就三欄
+             - 想要更晚才三欄：把 col-md-2 改成 col-lg-2（≥992px 才三欄）
+               （只換 md→lg，不改數字 2，就不會改比例） -->
         <div class="col-12 col-md-2 box">導覽列</div>
 
         <!-- ◤ 內容區（Content）
-             xs：12 欄（直排）
-             sm：8 欄（8:4 → 2:1 寬度比）
-             md：6 欄（6 是 1:3:2 的 “3”）-->
+             col-12：xs 直排
+             col-sm-8：sm（≥576px）開始變成 8/12
+             col-md-6：md（≥768px）變成 6/12（1:3:2 裡的 3）
+
+             【可調斷點：什麼時候才進入 2:1（8:4）排版？】
+             - 現在用 sm：≥576px 就 8:4
+             - 想要更晚才 8:4：把 col-sm-8 改成 col-md-8（≥768px 才 8:4）
+               （只換 sm→md，不改數字 8，就不會改比例）
+
+             【可調斷點：什麼時候才進入 1:3:2（2:6:4）排版？】
+             - 現在用 md：≥768px 就 2:6:4
+             - 想要更晚：把 col-md-6 改成 col-lg-6（≥992px 才 2:6:4） -->
         <div class="col-12 col-sm-8 col-md-6 box">內容區</div>
 
         <!-- ◤ 側邊欄（Sidebar）
-             xs：12（直排）
-             sm：4（與內容區形成 8:4）
-             md：4（與 1:3:2 中 2 的位置一致） -->
+             col-12：xs 直排
+             col-sm-4：sm（≥576px）與內容區形成 8:4（2:1）
+             col-md-4：md（≥768px）成為 4/12（1:3:2 裡的 2）
+
+             【可調斷點：同內容區】
+             - 想要更晚才 8:4：把 col-sm-4 改成 col-md-4
+             - 想要更晚才 2:6:4：把 col-md-4 改成 col-lg-4
+               （重點：只換 sm/md/lg 名稱，不改 4，比例不會變） -->
         <div class="col-12 col-sm-4 col-md-4 box">側邊欄</div>
 
     </div>
 
-    <!-- ▣ 頁尾（固定整欄 col-12） -->
+    <!-- ▣ 頁尾（同頁首） -->
     <div class="row">
         <div class="col-12 box">頁尾</div>
     </div>
 
 </div>
 
-<!-- JS 載入位置同理：01.html 在 ch_07 → 必須 ../ 才能找到 js/bootstrap.bundle.min.js -->
+<!-- Bootstrap JS（互動元件需要；純格線排版其實只靠 CSS 也可顯示） -->
 <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
