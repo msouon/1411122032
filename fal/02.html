@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 網站架構</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">品牌名稱</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">首頁</a></li>
+            <li class="nav-item"><a class="nav-link" href="#feature">特色</a></li>
+            <li class="nav-item"><a class="nav-link" href="#content">內容</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">聯絡</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bg-light py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h1 class="display-5">主視覺區塊</h1>
+            <p class="lead">文字一：放置標題或主要說明。</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary" href="#feature">主要行動</a>
+              <a class="btn btn-outline-secondary" href="#content">次要行動</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="border rounded bg-white p-5 text-center">圖片一</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feature" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">簡要區塊</h2>
+          <p class="text-muted">以文字與圖片佈局先行呈現。</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5 class="card-title">文字二</h5>
+                <p class="card-text">簡短描述內容。</p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <span class="text-muted">圖片二</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5 class="card-title">文字三</h5>
+                <p class="card-text">簡短描述內容。</p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <span class="text-muted">圖片三</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5 class="card-title">文字四</h5>
+                <p class="card-text">簡短描述內容。</p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <span class="text-muted">圖片四</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="content" class="bg-light py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="p-4 bg-white border rounded h-100">
+              <h3 class="fw-bold">主要內容</h3>
+              <p class="text-muted">文字五：主要文章或簡介位置。</p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="p-4 bg-white border rounded h-100">
+              <h4 class="fw-bold">側邊欄</h4>
+              <p class="text-muted">文字六：補充資訊或連結。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-2 mb-md-0">&copy; 2024 Bootstrap 網站架構</p>
+      <div class="text-muted">文字七：頁尾資訊</div>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
