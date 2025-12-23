@@ -1,57 +1,263 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap 網站架構</title>
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-
-  <style>
-    body {
-      padding-top: 56px;   /* navbar 高度 */
-      padding-bottom: 80px; /* footer 高度 */
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>明日方舟簡易介紹</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
 </head>
 
 <body>
 
-<!-- 頁首 -->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">品牌名稱</a>
+      <a class="navbar-brand" href="#top">明日方舟簡易介紹</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="切換導航">
+        data-bs-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="切換導航">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">首頁</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">特色</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">內容</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">聯絡</a></li>
+          <li class="nav-item"><a class="nav-link" href="#overview">遊戲簡介</a></li>
+          <li class="nav-item"><a class="nav-link" href="#world">世界觀介紹</a></li>
+          <li class="nav-item"><a class="nav-link" href="#classes">職業介紹</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gameplay">塔防玩法</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reference">資料來源</a></li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
 
-<!-- 中間內容刻意留空 -->
+<main id="top">
 
-<!-- 頁尾 -->
-<footer class="bg-dark text-white py-4 fixed-bottom">
-  <div class="container d-flex justify-content-between align-items-center">
-    <p class="mb-0">&copy; 2024 Bootstrap 網站架構</p>
-    <div class="d-flex gap-3">
-      <a class="text-white text-decoration-none" href="#">隱私權政策</a>
-      <a class="text-white text-decoration-none" href="#">服務條款</a>
+  <!-- Hero（像 Starter Template：文字＋圖片） -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h1 class="display-5 mb-3">明日方舟</h1>
+          <p class="lead text-muted mb-4">
+            新手向簡易介紹網站（快速理解：是什麼遊戲、世界觀、職業、玩法）
+          </p>
+          <div class="d-flex gap-2">
+            <a class="btn btn-primary" href="#overview">開始了解</a>
+            <a class="btn btn-outline-secondary" href="#classes">先看職業</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- 主視覺圖片位置（換成 img 即可） -->
+          <div class="border rounded bg-light p-5 text-center">
+            主視覺圖片（Logo / 宣傳圖）
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!-- 區域一：遊戲簡介（1圖＋短文） -->
+  <section id="overview" class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 order-lg-2">
+          <h2 class="fw-bold mb-3">遊戲簡介</h2>
+          <ul class="text-muted mb-0">
+            <li>遊戲名稱：明日方舟</li>
+            <li>遊戲類型：策略塔防</li>
+            <li>開發／營運：＿＿＿＿</li>
+            <li>發行平台：＿＿＿＿</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="border rounded bg-white p-5 text-center">
+            圖片 1：遊戲/官方主圖（或Logo）
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 區域二：世界觀介紹（1圖＋稍長文字/條列） -->
+  <section id="world" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3">世界觀介紹</h2>
+          <p class="text-muted mb-2">
+            （這裡放 4～6 行簡述：世界背景＋主要狀況＋概念，不寫劇情細節）
+          </p>
+          <ul class="text-muted mb-0">
+            <li>世界背景：＿＿＿＿</li>
+            <li>主要狀況：＿＿＿＿</li>
+            <li>核心概念：＿＿＿＿</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="border rounded bg-light p-5 text-center">
+            圖片 1：世界觀圖（地圖/背景氛圍）
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 區域三：職業介紹（8卡片＝8圖＋1句） -->
+  <section id="classes" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold mb-2">職業介紹</h2>
+        <p class="text-muted mb-0">每個職業 1 張小圖 + 1 句定位（最省時間又清楚）</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 每張卡片：上方圖片位置 + 下方一句話 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="border rounded bg-white p-3 text-center mb-3">圖</div>
+              <h6 class="fw-bold mb-1">先鋒</h6>
+              <p class="text-muted small mb-0">前期部署／費用回復</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="border rounded bg-white p-3 text-center mb-3">圖</div>
+              <h6 class="fw-bold mb-1">近衛</h6>
+              <p class="text-muted small mb-0">近距離輸出</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="border rounded bg-white p-3 text-center mb-3">圖</div>
+              <h6 class="fw-bold mb-1">重裝</h6>
+              <p class="text-muted small mb-0">高防禦／阻擋敵人</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="border rounded bg-white p-3 text-center mb-3">圖</div>
+              <h6 class="fw-bold mb-1">狙擊</h6>
+              <p class="text-muted small mb-0">遠距離物理攻擊</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="border rounded bg-white p-3 text-center mb-3">圖</div>
+              <h6 class="fw-bold mb-1">術師</h6>
+              <p class="text-muted small mb-0">遠距離法術攻擊</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="border rounded bg-white p-3 text-center mb-3">圖</div>
+              <h6 class="fw-bold mb-1">醫療</h6>
+              <p class="text-muted small mb-0">治療友方單位</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="border rounded bg-white p-3 text-center mb-3">圖</div>
+              <h6 class="fw-bold mb-1">輔助</h6>
+              <p class="text-muted small mb-0">增益／干擾效果</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="border rounded bg-white p-3 text-center mb-3">圖</div>
+              <h6 class="fw-bold mb-1">特種</h6>
+              <p class="text-muted small mb-0">特殊用途角色</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 區域四：塔防玩法（2圖＋條列） -->
+  <section id="gameplay" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3">塔防玩法介紹</h2>
+          <p class="text-muted mb-2">
+            （這裡放 3～5 行簡述，搭配條列最清楚）
+          </p>
+          <ul class="text-muted mb-0">
+            <li>塔防是：＿＿＿＿</li>
+            <li>核心概念：部署角色、阻擋敵人前進</li>
+            <li>玩法重點：＿＿＿＿</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="border rounded bg-light p-4 text-center">
+                圖片 1：玩法示意圖（部署/路線）
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="border rounded bg-light p-4 text-center">
+                圖片 2：角色配置示意（或UI截圖）
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 區域五：資料來源（文字為主，可選1圖） -->
+  <section id="reference" class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-3">資料來源說明</h2>
+          <ul class="text-muted mb-0">
+            <li>圖片：官方網站／官方社群／遊戲截圖（自行錄製）</li>
+            <li>文字資料：官方資訊或整理筆記（會在此標註）</li>
+            <li>用途：課程期末專案展示（非官方網站）</li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="border rounded bg-white p-4 text-center">
+            （可選）來源示意圖/小圖
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-dark text-white py-3">
+  <div class="container text-center">
+    <small>非官方介紹網站｜僅作課程專案使用</small>
   </div>
 </footer>
 
