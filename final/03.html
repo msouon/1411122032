@@ -1,224 +1,155 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>明日方舟介紹網站｜期末作業</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>明日方舟簡易介紹｜期末作業</title>
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <style>
-    /* 只做最小調整：其餘靠 Bootstrap 類別 */
-    .hero-img{ max-height: 360px; object-fit: cover; width: 100%; }
-    .card-img-fixed{ height: 180px; object-fit: cover; }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-light">
 
-  <!-- Navbar：用 text-decoration-none、list-inline 觀念（nav本身就是清單） -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-decoration-none" href="#top">ARKNIGHTS</a>
+<!-- 導覽列 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#top">明日方舟簡易介紹</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div id="nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#story">世界觀</a></li>
-          <li class="nav-item"><a class="nav-link" href="#classes">職分介紹</a></li>
-          <li class="nav-item"><a class="nav-link" href="#features">玩法特色</a></li>
-          <li class="nav-item"><a class="nav-link" href="#guide">新手指南</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">圖集</a></li>
-        </ul>
-      </div>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#overview">遊戲簡介</a></li>
+        <li class="nav-item"><a class="nav-link" href="#world">世界觀介紹</a></li>
+        <li class="nav-item"><a class="nav-link" href="#classes">職業介紹</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gameplay">塔防玩法介紹</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reference">資料來源</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Hero：text-center、bg-*、m/p 間距 -->
-  <header id="top" class="container py-4">
-    <div class="row g-3 align-items-center">
-      <div class="col-lg-7">
-        <div class="d-inline-block bg-primary text-white px-2 py-1 rounded mb-2">期末作業｜Bootstrap 公用類別練習</div>
+<main id="top" class="container py-4">
 
-        <h1 class="display-6 fw-bold mb-2">明日方舟 Arknights</h1>
-        <p class="text-secondary mb-3">
-          （把你原本的簡介貼在這）<span class="fst-italic">塔防 × 幹員養成 × 劇情世界觀</span>。
-          這頁重點示範：<code>bg-*</code>、<code>text-*</code>、<code>m/p</code>、<code>text-center</code>、清單與文字裝飾。
-        </p>
+  <!-- 主標題 -->
+  <section class="mb-4 text-center">
+    <h1 class="fw-bold">明日方舟</h1>
+    <p class="text-muted">
+      新手向簡易介紹網站<br>
+      透過整理遊戲背景、職業分類與玩法，協助玩家快速認識本作
+    </p>
+  </section>
 
-        <div class="d-flex flex-wrap gap-2">
-          <a class="btn btn-primary" href="#features">先看玩法特色</a>
-          <a class="btn btn-outline-secondary" href="#guide">新手入門</a>
-        </div>
+  <!-- 區域一：遊戲簡介 -->
+  <section id="overview" class="mb-4">
+    <div class="bg-white border rounded p-3">
+      <h2 class="fw-bold mb-3">遊戲簡介</h2>
 
-        <!-- 間距示範區塊：mt-4 p-3 -->
-        <div class="mt-4 p-3 bg-white border rounded">
-          <div class="fw-bold mb-1">這個區塊用到：<code>mt-4 p-3</code></div>
-          <small class="text-muted">你要調距離：改成 <code>p-4</code> / <code>p-5</code> 或 <code>mt-5</code></small>
-        </div>
-      </div>
+      <ul class="mb-0">
+        <li>遊戲名稱：明日方舟（Arknights）</li>
+        <li>遊戲類型：策略塔防遊戲</li>
+        <li>開發公司：Hypergryph（鷹角網路）</li>
+        <li>發行平台：iOS、Android</li>
+      </ul>
 
-      <div class="col-lg-5">
-        <!-- 換成你的主視覺 -->
-        <img class="hero-img rounded border" src="img/hero.jpg" alt="Arknights hero" />
-      </div>
+      <p class="text-secondary mt-3 mb-0">
+        《明日方舟》是一款結合塔防玩法與角色養成要素的策略遊戲。
+        玩家需要根據關卡地形與敵人配置，安排不同職業的角色進行防禦，
+        在有限的資源下做出最合適的戰術選擇。
+      </p>
     </div>
-  </header>
+  </section>
 
-  <main class="container pb-5">
+  <!-- 區域二：世界觀介紹 -->
+  <section id="world" class="mb-4">
+    <div class="bg-white border rounded p-3">
+      <h2 class="fw-bold mb-3">世界觀介紹</h2>
 
-    <!-- 世界觀：text-center + 卡片 -->
-    <section id="story" class="mb-4">
-      <div class="bg-white border rounded p-3">
-        <h2 class="h4 fw-bold text-center mb-3">世界觀</h2>
-        <p class="text-secondary mb-0">
-          把你原本「世界觀/羅德島/感染者/整體背景」貼這裡。
-        </p>
-      </div>
-    </section>
+      <p class="text-secondary">
+        《明日方舟》的故事發生在一個名為「泰拉」的世界。
+        這個世界長期受到天災影響，頻繁發生的大規模災害迫使人們不斷遷徙，
+        並建立可移動的城市來生存。
+      </p>
 
-    <!-- 職分介紹：用清單 list-unstyled + badge 類似 bg-* -->
-    <section id="classes" class="mb-4">
-      <div class="bg-white border rounded p-3">
-        <h2 class="h4 fw-bold mb-3">幹員職分介紹</h2>
+      <p class="text-secondary">
+        在天災之後，世界中出現了一種名為「源石」的物質，
+        雖然帶來能源與科技的發展，卻也造成了名為「感染者」的社會問題。
+        感染者往往受到歧視與排擠，使世界局勢更加動盪。
+      </p>
 
-        <div class="row g-3">
-          <div class="col-md-4">
-            <div class="p-3 border rounded h-100">
-              <div class="bg-success text-white px-2 py-1 rounded d-inline-block mb-2">近衛</div>
-              <ul class="list-unstyled mb-0">
-                <li>• 特色：近戰輸出</li>
-                <li>• 常見定位：單切 / 群攻</li>
-                <li>• 代表幹員：（填你的）</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="p-3 border rounded h-100">
-              <div class="bg-warning text-dark px-2 py-1 rounded d-inline-block mb-2">重裝</div>
-              <ul class="list-unstyled mb-0">
-                <li>• 特色：擋怪 / 扛傷</li>
-                <li>• 常見定位：主坦 / 副坦</li>
-                <li>• 代表幹員：（填你的）</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="p-3 border rounded h-100">
-              <div class="bg-info text-white px-2 py-1 rounded d-inline-block mb-2">醫療</div>
-              <ul class="list-unstyled mb-0">
-                <li>• 特色：補血 / 解狀態</li>
-                <li>• 常見定位：單補 / 群補</li>
-                <li>• 代表幹員：（填你的）</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- list-inline：快速列出其它職分 -->
-        <div class="mt-3">
-          <span class="fw-bold">其他職分：</span>
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item bg-light border rounded px-2 py-1">狙擊</li>
-            <li class="list-inline-item bg-light border rounded px-2 py-1">術師</li>
-            <li class="list-inline-item bg-light border rounded px-2 py-1">輔助</li>
-            <li class="list-inline-item bg-light border rounded px-2 py-1">特種</li>
-            <li class="list-inline-item bg-light border rounded px-2 py-1">先鋒</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- 玩法特色：三欄卡片，強制用 bg/text + 間距 -->
-    <section id="features" class="mb-4">
-      <div class="bg-white border rounded p-3">
-        <h2 class="h4 fw-bold mb-3">玩法特色</h2>
-
-        <div class="row g-3">
-          <div class="col-md-4">
-            <div class="p-3 border rounded h-100">
-              <div class="bg-primary text-white px-2 py-1 rounded d-inline-block mb-2">塔防</div>
-              <p class="text-secondary mb-0">（貼你原本的塔防特色敘述）</p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="p-3 border rounded h-100">
-              <div class="bg-dark text-white px-2 py-1 rounded d-inline-block mb-2">策略</div>
-              <p class="text-secondary mb-0">（貼你原本的策略：地形、部署順序、技能時機）</p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="p-3 border rounded h-100">
-              <div class="bg-danger text-white px-2 py-1 rounded d-inline-block mb-2">養成</div>
-              <p class="text-secondary mb-0">（貼你原本的養成：精英化、技能專精、模組）</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 新手指南：用 code/kbd/pre/samp（7-1-10 的那張） -->
-    <section id="guide" class="mb-4">
-      <div class="bg-white border rounded p-3">
-        <h2 class="h4 fw-bold mb-3">新手指南</h2>
-
-        <p class="mb-2">
-          快速建議：先把隊伍的「擋」與「補」穩定起來，再補輸出。
-          如果要快速搜尋某個關卡攻略，可以按 <kbd>Ctrl</kbd> + <kbd>F</kbd> 在頁面找關鍵字。
-        </p>
-
-        <div class="p-3 bg-light border rounded">
-          <p class="fw-bold mb-2">範例：一個簡短的「隊伍配置筆記」</p>
-          <pre class="mb-0"><code>
-先鋒：2（回費）
-重裝：1~2（擋線）
-醫療：1~2（補血）
-輸出：剩下看關卡
-          </code></pre>
-          <p class="mt-2 mb-0"><samp>Tip：部署順序通常先鋒 → 重裝 → 醫療 → 輸出</samp></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 圖集：用 float-start / float-end（你課件的文繞圖） -->
-    <section id="gallery">
-      <div class="bg-white border rounded p-3">
-        <h2 class="h4 fw-bold mb-3">圖集展示</h2>
-
-        <img class="float-start me-3 mb-2 rounded border" src="img/pic1.jpg" alt="pic1" width="280" />
-        <p class="text-secondary">
-          （貼你原本的圖說）這段示範 <code>float-start</code> + <code>me-3</code> 讓文字繞圖。
-          你也可以用 <code>float-end</code> 做右側文繞圖。
-        </p>
-
-        <div class="clearfix"></div>
-
-        <img class="float-end ms-3 mb-2 rounded border" src="img/pic2.jpg" alt="pic2" width="280" />
-        <p class="text-secondary mb-0">
-          （貼你原本的圖說）這段示範 <code>float-end</code> + <code>ms-3</code>。
-          最後用 <code>clearfix</code> 讓後面區塊回到正常排版。
-        </p>
-
-        <div class="clearfix"></div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="bg-white border-top">
-    <div class="container py-3 text-center text-secondary">
-      <small class="text-reset">© 2026 明日方舟介紹網站｜期末作業</small>
+      <p class="text-secondary mb-0">
+        玩家所屬的組織「羅德島」致力於治療感染者、調查天災，
+        並在各地衝突中提供協助。整體世界觀著重於政治、倫理與人性議題，
+        即使不深入主線劇情，也能感受到其完整的設定。
+      </p>
     </div>
-  </footer>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 區域三：職業介紹 -->
+  <section id="classes" class="mb-4">
+    <div class="bg-white border rounded p-3">
+      <h2 class="fw-bold mb-3">職業介紹</h2>
+
+      <ul class="list-unstyled mb-0">
+        <li class="mb-2"><strong>先鋒：</strong>負責前期部署與費用回復，幫助玩家快速建立防線。</li>
+        <li class="mb-2"><strong>近衛：</strong>近距離作戰角色，具有穩定或爆發型輸出能力。</li>
+        <li class="mb-2"><strong>重裝：</strong>高防禦角色，主要用於阻擋敵人並保護後方單位。</li>
+        <li class="mb-2"><strong>狙擊：</strong>遠距離物理攻擊，適合對付飛行或低防禦敵人。</li>
+        <li class="mb-2"><strong>術師：</strong>遠距離法術攻擊，能有效對抗高防禦敵人。</li>
+        <li class="mb-2"><strong>醫療：</strong>負責治療友方角色，維持隊伍存活。</li>
+        <li class="mb-2"><strong>輔助：</strong>提供增益、減益或控制效果，輔助整體戰術運作。</li>
+        <li><strong>特種：</strong>具備特殊機制的角色，如位移、陷阱或犧牲型玩法。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 區域四：塔防玩法介紹 -->
+  <section id="gameplay" class="mb-4">
+    <div class="bg-white border rounded p-3">
+      <h2 class="fw-bold mb-3">塔防玩法介紹</h2>
+
+      <p class="text-secondary">
+        塔防類型遊戲的核心概念，是透過配置防禦單位來阻止敵人抵達終點。
+        玩家需要根據敵人的行進路線與能力，安排合適的角色進行防守。
+      </p>
+
+      <ul class="mb-0">
+        <li>玩家需消耗費用部署角色於地圖指定位置</li>
+        <li>不同職業負責不同戰術功能</li>
+        <li>關卡中需要隨時調整部署與技能施放時機</li>
+      </ul>
+
+      <p class="text-secondary mt-3 mb-0">
+        《明日方舟》的塔防玩法強調策略與思考，
+        並非單純堆疊高等級角色，而是考驗玩家對關卡設計與職業搭配的理解。
+      </p>
+    </div>
+  </section>
+
+  <!-- 區域五：資料來源 -->
+  <section id="reference">
+    <div class="bg-white border rounded p-3">
+      <h2 class="fw-bold mb-3">資料來源</h2>
+
+      <ul class="mb-0">
+        <li>圖片來源：官方網站、官方社群平台、遊戲實際畫面截圖</li>
+        <li>文字內容：官方公開資訊與課程整理後自行撰寫</li>
+        <li>本網站用途：課程期末作業展示，非官方網站</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- 頁尾 -->
+<footer class="bg-white border-top mt-4">
+  <div class="container py-3 text-center text-muted">
+    <small>明日方舟簡易介紹網站｜期末作業</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
